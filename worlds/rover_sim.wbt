@@ -1,0 +1,583 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/rocks/protos/Rock.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.1563712263319362 -0.10526136517111957 0.982073360079459 4.309866024935273
+  position 0.7500414399971751 2.356283146072518 1.1077118005749036
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Robot {
+  translation -1.28277 -0.0697777 0.241105
+  rotation 0.2654199193955958 -0.20046229957654085 0.9430626346306595 0.0316154452839113
+  children [
+    Solid {
+      translation 0.46 8.06273e-07 -0.0100002
+      rotation 0.574869126182818 0.582280839048999 0.574869126182818 2.0944
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position -0.03611185260314503
+            anchor 0.225 0 -0.0885
+          }
+          endPoint Solid {
+            translation 0.2182 -0.036784526179137585 -0.08186760723596868
+            rotation -0.08583666067921072 0.9925935513321762 -0.08596574630177298 1.5854576454483906
+            children [
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position 0.04498036386958382
+                  axis 0 0 1
+                  anchor 0 -0.042 0.05
+                }
+                endPoint SolidReference {
+                  solidName "front left bogey arm"
+                }
+              }
+              CadShape {
+                url [
+                  "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-swing_arm_assembly v2.obj"
+                ]
+              }
+            ]
+            name "front left locking arm"
+            boundingObject Mesh {
+              url [
+                "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-swing_arm_assembly v3.obj"
+              ]
+              ccw FALSE
+            }
+            physics Physics {
+            }
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position -0.03625708635444043
+            anchor 0.225 0 -0.0145
+          }
+          endPoint Solid {
+            translation 0.2185 -0.03677531617576849 -0.01866966667398238
+            rotation 0.05870892496149287 0.9965590801751902 0.05850864765352701 1.5853891073462854
+            children [
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position 0.045126376270983586
+                  axis 0 0 1
+                  anchor 0 -0.0415 0.045
+                }
+                endPoint Solid {
+                  translation 0.025095695452522365 -0.04527174624733541 0.045
+                  rotation 0.05746847241330167 0.9966905307593014 -0.057492265333900984 1.570769226348215
+                  children [
+                    HingeJoint {
+                      jointParameters HingeJointParameters {
+                        position 7.435391786185187
+                        axis -1 0 0
+                        anchor -0.175 0 -0.2
+                      }
+                      device [
+                        RotationalMotor {
+                          name "front left wheel motor"
+                        }
+                      ]
+                      endPoint Solid {
+                        translation -0.17499939521013497 -0.0286360779354135 -0.16020996286939126
+                        rotation -0.478380184766187 0.7364116475620217 -0.47838298899318893 1.8721017483365876
+                        children [
+                          CadShape {
+                            url [
+                              "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v2.obj"
+                            ]
+                          }
+                        ]
+                        name "front left wheel"
+                        boundingObject Mesh {
+                          url [
+                            "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v4.obj"
+                          ]
+                        }
+                        physics Physics {
+                        }
+                      }
+                    }
+                    HingeJoint {
+                      jointParameters HingeJointParameters {
+                        position 7.459587863767073
+                        axis -1 0 0
+                        anchor -0.175 0 0.2
+                      }
+                      device [
+                        RotationalMotor {
+                          name "mid left wheel motor"
+                        }
+                      ]
+                      endPoint Solid {
+                        translation -0.17502366296431826 -0.028051556636503834 0.24137476393722468
+                        rotation -0.4851780534008481 0.7274608116082641 -0.4851834952596898 1.8837614826758058
+                        children [
+                          CadShape {
+                            url [
+                              "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v2.obj"
+                            ]
+                          }
+                        ]
+                        boundingObject Mesh {
+                          url [
+                            "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v4.obj"
+                          ]
+                        }
+                        physics Physics {
+                        }
+                      }
+                    }
+                    CadShape {
+                      url [
+                        "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2122-bogies-front-right v4.obj"
+                      ]
+                    }
+                  ]
+                  name "front left bogey arm"
+                  boundingObject Mesh {
+                    url [
+                      "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2122-bogies-front-right v5.obj"
+                    ]
+                  }
+                  physics Physics {
+                  }
+                }
+              }
+              CadShape {
+                url [
+                  "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-swing_arm_assembly v2.obj"
+                ]
+              }
+            ]
+            name "front left swing arm"
+            boundingObject Mesh {
+              url [
+                "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-swing_arm_assembly v3.obj"
+              ]
+            }
+            physics Physics {
+            }
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position -0.02592427636768176
+            anchor -0.225 0 -0.0145
+          }
+          endPoint Solid {
+            translation -0.21786 -0.03567334187811468 -0.02072478963557473
+            rotation 0.08726223533675577 -0.9931799943357267 -0.07732270775987209 1.5712613897421701
+            children [
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position -0.053654699252057125
+                  axis 0 0 1
+                  anchor 0 -0.042 0.04
+                }
+                endPoint Solid {
+                  translation -0.024409104799181028 -0.04604544223819622 0.0449981
+                  rotation -0.07988868295126744 0.9936549062171177 0.07916896921751033 1.5898217952968674
+                  children [
+                    HingeJoint {
+                      jointParameters HingeJointParameters {
+                        position 4.7399176586940515
+                        anchor -0.175 0 0.2
+                      }
+                      device [
+                        RotationalMotor {
+                          name "front right wheel motor"
+                        }
+                      ]
+                      endPoint Solid {
+                        translation -0.1749856577300652 -0.01134386653653366 0.24870103973943103
+                        rotation -0.5719792933648218 0.5879455671425128 -0.571978756632926 2.0785748817554053
+                        children [
+                          CadShape {
+                            url [
+                              "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v2.obj"
+                            ]
+                          }
+                        ]
+                        name "front right front wheel"
+                        boundingObject Mesh {
+                          url [
+                            "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v4.obj"
+                          ]
+                        }
+                        physics Physics {
+                        }
+                      }
+                    }
+                    HingeJoint {
+                      jointParameters HingeJointParameters {
+                        position 7.198190245910593
+                        anchor -0.175 0 -0.2
+                      }
+                      device [
+                        RotationalMotor {
+                          name "mid right wheel motor"
+                        }
+                      ]
+                      endPoint Solid {
+                        translation -0.17497758037372368 -0.020729600076282242 -0.24335458308570312
+                        rotation 0.4040454383927353 0.8206646458770589 0.4040505200114262 1.7671613208591075
+                        children [
+                          CadShape {
+                            url [
+                              "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v2.obj"
+                            ]
+                          }
+                        ]
+                        boundingObject Mesh {
+                          url [
+                            "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v4.obj"
+                          ]
+                        }
+                        physics Physics {
+                        }
+                      }
+                    }
+                    CadShape {
+                      url [
+                        "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2122-bogies-front-right v4.obj"
+                      ]
+                    }
+                  ]
+                  name "right bogey arm"
+                  boundingObject Mesh {
+                    url [
+                      "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2122-bogies-front-right v5.obj"
+                    ]
+                  }
+                  physics Physics {
+                  }
+                }
+              }
+              CadShape {
+                url [
+                  "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-swing_arm_assembly v2.obj"
+                ]
+              }
+            ]
+            name "front right swing arm"
+            boundingObject Mesh {
+              url [
+                "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-swing_arm_assembly v3.obj"
+              ]
+            }
+            physics Physics {
+            }
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position -0.023908851905812732
+            anchor -0.225 0 -0.0885
+          }
+          endPoint Solid {
+            translation -0.218 -0.03689379899307347 -0.0836165999694253
+            rotation -0.07101304943548628 -0.9949577335822047 0.07082552643528965 1.560209289899324
+            children [
+              HingeJoint {
+                jointParameters HingeJointParameters {
+                  position -0.05164063815721701
+                  axis 0 0 1
+                  anchor 0 -0.043 0.05
+                }
+                endPoint SolidReference {
+                  solidName "right bogey arm"
+                }
+              }
+              CadShape {
+                url [
+                  "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-swing_arm_assembly v2.obj"
+                ]
+              }
+            ]
+            boundingObject Mesh {
+              url [
+                "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-swing_arm_assembly v3.obj"
+              ]
+            }
+            physics Physics {
+            }
+          }
+        }
+        Solid {
+          translation 0.1295 -0.2715 -0.7575
+          rotation 9.58979e-09 -1 9.58976e-09 -1.5707953071795862
+          children [
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                position 7.329196373609682
+                axis 0 0 1
+                anchor -0.137 0.194 0.24
+              }
+              device [
+                RotationalMotor {
+                  name "back left wheel motor"
+                }
+              ]
+              endPoint Solid {
+                translation -0.0902053074697058 0.17904570984380644 0.22197717338337664
+                rotation 1.3444250114242824e-06 -5.287601931359269e-07 0.9999999999989564 1.0460110664308244
+                children [
+                  CadShape {
+                    url [
+                      "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v2.obj"
+                    ]
+                  }
+                ]
+                boundingObject Mesh {
+                  url [
+                    "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v4.obj"
+                  ]
+                }
+                physics Physics {
+                }
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                position 7.30315228921741
+                axis 0 0 1
+                anchor -0.137 0.194 -0.55
+              }
+              device [
+                RotationalMotor {
+                  name "back right wheel motor"
+                }
+              ]
+              endPoint Solid {
+                translation -0.09084844975943102 0.17742002699087328 -0.5850367427448029
+                rotation 3.5172543904714544e-06 -1.101904224160878e-06 0.9999999999932073 1.019966982042528
+                children [
+                  CadShape {
+                    url [
+                      "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v2.obj"
+                    ]
+                  }
+                ]
+                name "solid(1)"
+                boundingObject Mesh {
+                  url [
+                    "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr2021-wheel v4.obj"
+                  ]
+                }
+                physics Physics {
+                }
+              }
+            }
+            DEF BOGEY CadShape {
+              url [
+                "../Rover CAD files/_mr2223-rover_main_mr2122-bogies-rear v2.obj"
+              ]
+            }
+          ]
+          name "rear bogey"
+          boundingObject Mesh {
+            url [
+              "../Rover CAD files/_mr2223-rover_main_mr2122-bogies-rear v3.obj"
+            ]
+            materialIndex 1
+          }
+          physics Physics {
+          }
+        }
+        CadShape {
+          url [
+            "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-full_assembly v2.obj"
+          ]
+        }
+      ]
+      name "chassis"
+      boundingObject Mesh {
+        url [
+          "../Rover CAD files/_mr2223-rover_main_mr2122-chassis_bogies_mr1617-chassis-full_assembly v3.obj"
+        ]
+        materialIndex 1
+      }
+      physics Physics {
+      }
+    }
+    Solid {
+      translation -0.11 0 0.51
+      children [
+        Solid {
+          translation 0.0123 0 0.49
+          children [
+            Solid {
+              translation 0.0375 0 -0.005
+              children [
+                Solid {
+                  translation 0 0 -0.0225
+                  children [
+                    Solid {
+                      children [
+                        Hinge2Joint {
+                          jointParameters HingeJointParameters {
+                            axis 0 1 0
+                            anchor 0 0 -0.0275
+                          }
+                          jointParameters2 JointParameters {
+                          }
+                          device [
+                            PositionSensor {
+                              name "camera_motor_vertical_position_sensor"
+                            }
+                            RotationalMotor {
+                              name "camera_motor_vertical"
+                            }
+                          ]
+                          device2 [
+                            PositionSensor {
+                              name "camera_motor_horizontal_position_sensor"
+                            }
+                            RotationalMotor {
+                              name "camera_motor_horizontal"
+                            }
+                          ]
+                          endPoint Solid {
+                            translation 0 0 -0.027346
+                            children [
+                              Camera {
+                                translation 0.025 0 0
+                                children [
+                                  Display {
+                                    name "tower_camera_display"
+                                  }
+                                ]
+                                name "tower_camera"
+                                fieldOfView 0.95
+                              }
+                              DEF CAMERA_HOUSING Shape {
+                                appearance PBRAppearance {
+                                  baseColor 0 0 0
+                                  roughness 0.5
+                                  metalness 0.5
+                                }
+                                geometry Box {
+                                  size 0.05 0.02 0.02
+                                }
+                              }
+                              Solid {
+                                translation 0.026 0 -1.10196e-07
+                                rotation 0 1 0 1.5707999999999998
+                                children [
+                                  Shape {
+                                    appearance PBRAppearance {
+                                      baseColor 0 0 0
+                                      roughness 0.5
+                                      metalness 0.5
+                                    }
+                                    geometry Cylinder {
+                                      height 0.005
+                                      radius 0.0075
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                            name "camera_housing(1)"
+                            boundingObject USE CAMERA_HOUSING
+                          }
+                        }
+                        DEF CAMERA_MOVE_JOINT Shape {
+                          appearance PBRAppearance {
+                            roughness 0.5
+                            metalness 0.5
+                          }
+                          geometry Cylinder {
+                            height 0.05
+                            radius 0.001
+                          }
+                        }
+                      ]
+                      boundingObject USE CAMERA_MOVE_JOINT
+                    }
+                    DEF CAMERA_CONNECTOR Shape {
+                      appearance PBRAppearance {
+                        baseColor 0.760784 0.760784 0.760784
+                        metalness 0.5
+                      }
+                      geometry Box {
+                        size 0.01 0.01 0.02
+                      }
+                    }
+                  ]
+                  name "camera_connector"
+                  boundingObject USE CAMERA_CONNECTOR
+                }
+                DEF CAMERA_HOLDER_SHAPE Shape {
+                  appearance PBRAppearance {
+                    baseColor 0.26274 0.26274 0.26274
+                    metalness 0.5
+                  }
+                  geometry Box {
+                    size 0.025 0.025 0.025
+                  }
+                }
+              ]
+              name "camera_holder"
+              boundingObject USE CAMERA_HOLDER_SHAPE
+            }
+            DEF TOWER_TOP_SHAPE Shape {
+              appearance PBRAppearance {
+                baseColor 0.26274 0.262743 0.262749
+                metalness 0.5
+              }
+              geometry Box {
+                size 0.05 0.025 0.015
+              }
+            }
+          ]
+          name "tower_top"
+          boundingObject USE TOWER_TOP_SHAPE
+          physics DEF TOWER_TOP_PH Physics {
+          }
+        }
+        DEF TOWER_SHAPE Shape {
+          appearance PBRAppearance {
+            baseColor 0.262745 0.262745 0.262745
+            metalness 0.5
+          }
+          geometry Box {
+            size 0.0254 0.0254 0.9652
+          }
+        }
+      ]
+      name "tower_base"
+      boundingObject USE TOWER_SHAPE
+      physics Physics {
+      }
+    }
+    GPS {
+    }
+  ]
+  name "rover"
+  physics Physics {
+  }
+  controller "rover_cpp"
+}
+Floor {
+}
+Rock {
+  translation -0.26769 0.366383 1.22125e-15
+}
+Rock {
+  translation -0.18769 -0.413617 1.22125e-15
+  name "rock(1)"
+}
